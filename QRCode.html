@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung</title>
+</head>
+<body>
+    <h2>Anmeldung</h2>
+    <form id="signupForm" onsubmit="validateForm(); return false;">
+        <label for="email">E-Mail-Adresse:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="checkbox" id="privacyPolicy" required>
+        <label for="privacyPolicy">Ich akzeptiere die Datenschutzbestimmungen</label>
+        <br>
+        <button type="submit">Anmelden</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Hier könntest du JavaScript-Code für zusätzliche Validierung hinzufügen
+
+            // Beispiel: Überprüfe, ob die Datenschutzbestimmungen akzeptiert wurden
+            if (!document.getElementById('privacyPolicy').checked) {
+                alert('Bitte akzeptieren Sie die Datenschutzbestimmungen.');
+                return;
+            }
+
+            // Hier könntest du Code hinzufügen, um die Daten zu verarbeiten (z.B. an einen Server senden)
+
+            alert('Vielen Dank für die Anmeldung!');
+        }
+    </script>
+</body>
+</html>
